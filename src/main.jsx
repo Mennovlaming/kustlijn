@@ -11,8 +11,8 @@ import Details2 from './pages/Details2.jsx';
 
 const App = () => (
     <Router>
-        <Home path="/" />
-        <Ticket path="/ticket" />
+        {/* <Home path="/" /> */}
+        <Ticket path="/" />
         <Details path="/details" />
         <Payment path="/payment" />
         <Success path="/success" />
