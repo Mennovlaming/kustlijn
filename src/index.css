@@ -27,7 +27,7 @@ p {
 }
 h2 {
     font-weight: 400;
-    margin-top: 3em;
+    margin-top: 2em;
 }
 h2 span {
     color: var(--darkgray);
@@ -38,7 +38,7 @@ h3 {
 }
 .eventix {
     margin-top: 1em;
-    width: 80%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -71,8 +71,12 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     gap: 1em;
+   
 }
-
+.events {
+width: 85%;
+margin-top: 1em;
+}
 .info {
     display: flex;
     align-items: center;
@@ -100,7 +104,6 @@ input[type="checkbox"] {
 .info__adress {
     display: flex;
     flex-direction: column;
-    gap: .5em;
 }
 .info__adress p{
     font-weight: 200;
@@ -114,6 +117,7 @@ input[type="checkbox"] {
     
 }
 .tickets li {
+    gap: .5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -283,23 +287,32 @@ hr {
 .friends li:nth-of-type(2) {
     z-index: 97;
     position: absolute;
-    left: 15px;
+    left: 20px;
 }
 .friends li:nth-of-type(3) {
     z-index: 98;
     position: absolute;
-    left: 30px;
+    left: 40px;
 }
 .friends li:nth-of-type(4) {
     z-index: 99;
     position: absolute;
-    left: 45px;
+    left: 60px;
 }
 .friends li:nth-of-type(5) {
     z-index: 100;
     position: absolute;
-    left: 60px;
+    left: 80px;
 }
 
+.friends img {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    border: 2px solid black;
 
-
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.247);
+}

@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'preact/hooks';
 import { route } from 'preact-router';
 
+import dev from '../assets/friends/dev.png'
+import bri from '../assets/friends/bri.png'
+import bo from '../assets/friends/bo.png'
+import jari from '../assets/friends/jari.png'
+import cinta from '../assets/friends/cinta.png'
+
 const Ticket2 = (props) => {
 
     const eventId = props.url ? props.url.split('/').pop() : null;
@@ -86,11 +92,11 @@ const Ticket2 = (props) => {
                 <section>
                     <p>5 van je vrienden gaan</p>
                     <ul className='friends'>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><img src={dev} alt="" /></li>
+                                        <li><img src={bri} alt="" /></li>
+                                        <li><img src={bo} alt="" /></li>
+                                        <li><img src={jari} alt="" /></li>
+                                        <li><img src={cinta} alt="" /></li>
                     </ul>
                 </section>
                 <section className='event'>

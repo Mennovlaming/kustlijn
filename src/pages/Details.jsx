@@ -102,7 +102,7 @@ const Details = ({ url }) => {
                   type="email"
                   placeholder="E-mailadres"
                   value={email}
-                  onInput={(e) => validateEmail(e.target.value)}
+                  // onInput={(e) => validateEmail(e.target.value)}
                   required
                 />
                 {emailError && <p style={{ color: "red" }}>Voer een geldig e-mailadres in</p>}

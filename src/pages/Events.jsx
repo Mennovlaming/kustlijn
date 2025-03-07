@@ -2,6 +2,12 @@ import { useEffect, useState } from 'preact/hooks';
 import { Link } from 'preact-router';
 import Arrow from '../assets/arrowright.png';
 
+import dev from '../assets/friends/dev.png'
+import bri from '../assets/friends/bri.png'
+import bo from '../assets/friends/bo.png'
+import jari from '../assets/friends/jari.png'
+import cinta from '../assets/friends/cinta.png'
+
 const Events = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -67,11 +73,11 @@ const Events = () => {
                                 <div>
                                     <p>5 van je vrienden gaan</p>
                                     <ul className='friends'>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
+                                        <li><img src={dev} alt="" /></li>
+                                        <li><img src={bri} alt="" /></li>
+                                        <li><img src={bo} alt="" /></li>
+                                        <li><img src={jari} alt="" /></li>
+                                        <li><img src={cinta} alt="" /></li>
                                     </ul>
                                 </div>
                                 
