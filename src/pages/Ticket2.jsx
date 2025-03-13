@@ -92,11 +92,13 @@ const Ticket2 = (props) => {
                 <section>
                     <p>5 van je vrienden gaan</p>
                     <ul className='friends'>
-                        <li><img src={dev} alt="" /></li>
+                        
                                         <li><img src={bri} alt="" /></li>
                                         <li><img src={bo} alt="" /></li>
                                         <li><img src={jari} alt="" /></li>
+                                        <li><img src={dev} alt="" /></li>
                                         <li><img src={cinta} alt="" /></li>
+                                        
                     </ul>
                 </section>
                 <section className='event'>

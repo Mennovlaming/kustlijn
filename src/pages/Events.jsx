@@ -70,17 +70,35 @@ const Events = () => {
                                     </div>
                                 </div>
                                 <hr />
-                                <div>
-                                    <p>5 van je vrienden gaan</p>
-                                    <ul className='friends'>
-                                        <li><img src={dev} alt="" /></li>
-                                        <li><img src={bri} alt="" /></li>
-                                        <li><img src={bo} alt="" /></li>
-                                        <li><img src={jari} alt="" /></li>
-                                        <li><img src={cinta} alt="" /></li>
-                                    </ul>
-                                </div>
-                                
+                                <div className='events__content'>
+    <div className='friends-container'>
+        <p>5 van je vrienden gaan</p>
+        <ul className='friends'>
+            <li><img src={dev} alt="" /></li>
+            <li><img src={bri} alt="" /></li>
+            <li><img src={bo} alt="" /></li>
+            <li><img src={jari} alt="" /></li>
+            <li><img src={cinta} alt="" /></li>
+        </ul>
+    </div>
+
+    <div className="details-container">
+        <details>
+            <summary></summary>
+            <div>
+            <p>
+                                                Informatie We hebben er weer zin in! Na een succesvolle eerste editie van onze citadel house special keren we 18 april weer terug bij onze geliefde citadel. We hebben wederom onze lokale helden achter de draaitafel staan en het beloofd weer een geweldig feestje te worden. Haal nu je ticket en we zien jou 18 april bij Citadel!
+                                                Line up
+                                                Dj 1 15:00 - 17:00
+                                                Dj 2 17:00 - 19:00
+                                                Dj 3 19:00 - 21:00
+                                                Dj 4 21:00 - 23:00
+                                            </p>
+            </div>
+        </details>
+    </div>
+</div>
+
                             </section>
                         </li>
                     );

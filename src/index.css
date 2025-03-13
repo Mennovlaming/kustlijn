@@ -13,6 +13,8 @@
 }
 
 body {
+    background-image: url("./assets/background.svg");
+    background-repeat: no-repeat;
     font-family: "Inter", serif;
     background-color: var(--background-sand);
 }
@@ -44,8 +46,8 @@ h3 {
     gap: 1em;
 }
 section {
-    background-color: var(--lightblue);
-    border: 3px solid var(--darkblue);
+    background-color: var(--background-sand);
+    border: 3px solid var(--eventixblue);
     border-radius: 15px;
     padding: 1em;
     box-shadow: 0px 4px 4px #00000025;
@@ -231,10 +233,10 @@ form input {
     border: 3px solid var(--darkblue);
     font-size: 20px;
     text-transform: uppercase;
-    background-color: var(--pinkred);
+    background-color: #219cda;
 }
 .success button:hover {
-    background-color: #da4b6a;
+    background-color: #6CCDFC;
 }
 
 .eventix section:last-of-type {
@@ -248,9 +250,8 @@ form input {
 }
 
 hr {
-    border: .5px solid var(--darkgray);
+    border: .3px solid #000;
 }
-
 
 
 .events ul:not(.friends) {
@@ -309,10 +310,46 @@ hr {
     position: absolute;
     top: -10px;
     left: -10px;
-    width: 35px;
-    height: 35px;
+    width: 32.5px;
+    height: 32.5px;
     border-radius: 50px;
-    border: 2px solid black;
-
+    border: 1px solid black;
+    
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.247);
+}
+
+.events__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap; /* Zorg ervoor dat details naar de volgende regel kan */
+}
+
+.friends-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Verwijder de vaste hoogte */
+}
+
+.details-container {
+    width: 100%; /* Zorg ervoor dat het altijd op een nieuwe regel staat */
+    margin-top: 0.5em;
+}
+
+
+summary {
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+details > div {
+    display: none; /* Verberg de content standaard */
+    width: 100%;
+    margin-top: 1em;
+}
+
+details[open] > div {
+    display: block; /* Toon de content als details open is */
 }

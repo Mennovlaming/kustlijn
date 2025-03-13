@@ -47,9 +47,9 @@ const Details = ({ url }) => {
   // Optionele validatie E-mail
   const validateEmail = (value) => {
     // Simpele email-check (niet perfect, maar voldoende voor demo)
-    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    // const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
     setEmail(value);
-    setEmailError(!emailRegex.test(value));
+    // setEmailError(!emailRegex.test(value));
   };
 
   const handleSubmit = (e) => {
@@ -70,7 +70,7 @@ const Details = ({ url }) => {
             <div className='inputfields'>
 
               <label htmlFor="name">
-                Naam
+                Naam <span style={"color: red;"}>*</span>
                 <input
                   name="name"
                   type="text"
@@ -82,7 +82,7 @@ const Details = ({ url }) => {
               </label>
 
               <label htmlFor="phonenumber">
-                Telefoonnummer
+                Telefoonnummer <span style={"color: red;"}>*</span>
                 <input
                   name="phonenumber"
                   type="text"
@@ -96,13 +96,13 @@ const Details = ({ url }) => {
 
               {/* 1) Nieuw inputveld voor E-MAIL */}
               <label htmlFor="email">
-                E-mailadres
+                E-mailadres <span style={"color: red;"}>*</span>
                 <input
                   name="email"
                   type="email"
                   placeholder="E-mailadres"
                   value={email}
-                  // onInput={(e) => validateEmail(e.target.value)}
+                  onInput={(e) => validateEmail(e.target.value)}
                   required
                 />
                 {emailError && <p style={{ color: "red" }}>Voer een geldig e-mailadres in</p>}
@@ -122,3 +122,8 @@ const Details = ({ url }) => {
 };
 
 export default Details;
+
+
+
+
+
