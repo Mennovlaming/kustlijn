@@ -8,6 +8,12 @@ import bo from '../assets/friends/bo.png'
 import jari from '../assets/friends/jari.png'
 import cinta from '../assets/friends/cinta.png'
 
+import share1 from '../assets/icons/Share1.png'
+import share from '../assets/icons/Share.png'
+import send from '../assets/icons/send.png'
+import calendar from '../assets/icons/Calendar.png'
+
+
 const Events = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -71,33 +77,40 @@ const Events = () => {
                                 </div>
                                 <hr />
                                 <div className='events__content'>
-    <div className='friends-container'>
-        <p>5 van je vrienden gaan</p>
-        <ul className='friends'>
-            <li><img src={dev} alt="" /></li>
-            <li><img src={bri} alt="" /></li>
-            <li><img src={bo} alt="" /></li>
-            <li><img src={jari} alt="" /></li>
-            <li><img src={cinta} alt="" /></li>
-        </ul>
-    </div>
+                                    <div className='friends-container'>
+                                        <p>5 van je vrienden gaan</p>
+                                        <ul className='friends'>
+                                            <li><img src={dev} alt="" /></li>
+                                            <li><img src={bri} alt="" /></li>
+                                            <li><img src={bo} alt="" /></li>
+                                            <li><img src={jari} alt="" /></li>
+                                            <li><img src={cinta} alt="" /></li>
+                                        </ul>
+                                    </div>
 
-    <div className="details-container">
-        <details>
-            <summary></summary>
-            <div>
-            <p>
-                                                Informatie We hebben er weer zin in! Na een succesvolle eerste editie van onze citadel house special keren we 18 april weer terug bij onze geliefde citadel. We hebben wederom onze lokale helden achter de draaitafel staan en het beloofd weer een geweldig feestje te worden. Haal nu je ticket en we zien jou 18 april bij Citadel!
-                                                Line up
-                                                Dj 1 15:00 - 17:00
-                                                Dj 2 17:00 - 19:00
-                                                Dj 3 19:00 - 21:00
-                                                Dj 4 21:00 - 23:00
-                                            </p>
-            </div>
-        </details>
-    </div>
-</div>
+                                    <div className="details-container">
+                                        <details>
+                                            <summary></summary>
+                                            <div className='details-content'>
+                                                <p>
+                                                    <strong>Informatie</strong> <br />
+                                                    We hebben er weer zin in! Na een succesvolle eerste editie van onze citadel house special keren we 18 april weer terug bij onze geliefde citadel. We hebben wederom onze lokale helden achter de draaitafel staan en het beloofd weer een geweldig feestje te worden. Haal nu je ticket en we zien jou 18 april bij Citadel!<br /><br />
+                                                    <strong>Line up</strong><br />
+                                                    Dj 1 15:00 - 17:00<br />
+                                                    Dj 2 17:00 - 19:00<br />
+                                                    Dj 3 19:00 - 21:00<br />
+                                                    Dj 4 21:00 - 23:00
+                                                </p>
+                                            </div>
+                                            <div className='shareButtons'>
+                                                <button><img src={share1} alt="" /></button>
+                                                <button><img src={share} alt="" /></button>
+                                                <button><img src={send} alt="" /></button>
+                                                <button><img src={calendar} alt="" /></button>
+                                            </div>
+                                        </details>
+                                </div>
+                            </div>
 
                             </section>
                         </li>

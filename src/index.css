@@ -1,5 +1,5 @@
 :root {
-    --background-sand: #FFF9E2;
+    --background-sand: #FFF9E2bf;
     --lightblue: #6CCDFC; 
     --darkblue: #23425C;
     --eventixblue: #006AFF;
@@ -268,8 +268,7 @@ hr {
     margin-top: 1em;
     display: flex;
     flex-direction: row;
-    gap: -1em;
-
+    margin-left: .5em;
     position: relative;
     
 }
@@ -288,22 +287,22 @@ hr {
 .friends li:nth-of-type(2) {
     z-index: 97;
     position: absolute;
-    left: 20px;
+    left: 25px;
 }
 .friends li:nth-of-type(3) {
     z-index: 98;
     position: absolute;
-    left: 40px;
+    left: 50px;
 }
 .friends li:nth-of-type(4) {
     z-index: 99;
     position: absolute;
-    left: 60px;
+    left: 75px;
 }
 .friends li:nth-of-type(5) {
     z-index: 100;
     position: absolute;
-    left: 80px;
+    left: 100px;
 }
 
 .friends img {
@@ -334,22 +333,57 @@ hr {
 }
 
 .details-container {
-    width: 100%; /* Zorg ervoor dat het altijd op een nieuwe regel staat */
+    /* width: 100%; Zorg ervoor dat het altijd op een nieuwe regel staat */
     margin-top: 0.5em;
 }
 
-
 summary {
     cursor: pointer;
-    margin-left: 1em;
+    /* margin-left: 1em; */
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-details > div {
+details > div:not(.shareButtons) {
     display: none; /* Verberg de content standaard */
     width: 100%;
     margin-top: 1em;
 }
 
-details[open] > div {
+details[open] > div:not(.shareButtons) {
     display: block; /* Toon de content als details open is */
+}
+details[open] .details-content {
+    background-color: #356791;
+    color: white;
+    padding: 1em;
+    width: 275px;
+    border-radius: 10px;
+
+}
+.shareButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 1em;
+}
+.shareButtons button{
+    border: none;
+    background-color:white;
+    padding: 1em;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    
+    box-shadow: 0 4px 4px #00000025;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.shareButtons button img {
+    width: 20px;
+    height: 20px;
 }
