@@ -1,6 +1,6 @@
+// Dit is de poster, nu overbodig door gebruik echte poster
 import { route } from 'preact-router';
 import QR from '../assets/qr.png';
-import poster from '../assets/poster.png';
 
 const Home = () => {
     return (

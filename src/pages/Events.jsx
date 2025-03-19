@@ -18,6 +18,7 @@ const Events = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // Fetch om de events op te halen, standaard GET, dus hoeft niet aangegeven te worden.
     useEffect(() => {
         fetch('http://localhost:5000/api/events')
             .then(response => {
@@ -70,9 +71,6 @@ const Events = () => {
                                     <div>
                                     <Link href={`/Tickets2/${event.id}`}><img src={Arrow} alt="arrowright" /></Link>
 
-        
-        
-                                        {/* route(`/payment?ticketType=${ticketType}&name=${name}&phone=${phone}`, true); */}
                                     </div>
                                 </div>
                                 <hr />
@@ -111,7 +109,6 @@ const Events = () => {
                                         </details>
                                 </div>
                             </div>
-
                             </section>
                         </li>
                     );

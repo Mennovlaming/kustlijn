@@ -22,9 +22,9 @@ const Ticket = () => {
         const totalGroepsTickets = tickets.groepsticket * TICKET_PRICES.groepsticket;
 
         setTotalPrice(totalNormaleTickets + totalGroepsTickets);
-    }, [tickets]); //  Wordt opnieuw uitgevoerd bij verandering van tickets
+    }, [tickets]); // Wordt opnieuw uitgevoerd bij verandering van tickets
 
-    //Maak gebruik van prev zodat je altijd de huige staat van de useState gebruikt, met ...tickets haal je de huidge waarde op als de ticket word uitgevoerd, niet perse up to date.
+    // Maak gebruik van prev zodat je altijd de huige staat van de useState gebruikt, met ...tickets haal je de huidge waarde op als de ticket word uitgevoerd, niet perse up to date.
     const plusTicket = (type) => {
         setTickets(prev => ({
             ...prev, 
@@ -39,6 +39,7 @@ const Ticket = () => {
         }));
     };
 
+    // Controleer of meer dan 0 tickets zijn gekocht en of de voorwaarden geaccepteerd zijn, zo ja, ga naar details met als prop ticketinfo.
     const goToNextPage = () => {
         if (tickets.normaleTicket === 0 && tickets.groepsticket === 0) {
             return;

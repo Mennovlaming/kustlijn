@@ -1,3 +1,4 @@
+// Compleet zelfde logica als ticket.jsx, alleen toegevoegd de extra 'personificatie'.
 import { useEffect, useState } from 'preact/hooks';
 import { route } from 'preact-router';
 

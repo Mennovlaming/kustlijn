@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'preact/hooks';
 import { route } from 'preact-router';
 
+// Haal doorgestuurde props op
 const Details = ({ url }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [phoneError, setPhoneError] = useState(false);
-  const [email, setEmail] = useState('');       // 1) Nieuw email-state
-  const [emailError, setEmailError] = useState(false); // 2) Optionele email-validatie
+  const [email, setEmail] = useState('');  
+  const [emailError, setEmailError] = useState(false); 
   const [ticketType, setTicketType] = useState('');
   const [totalPrice, setPrice] = useState(0);
   
+  // Haal de props uit de URL en zet ze in State
   useEffect(() => {
     const params = new URLSearchParams(url.split('?')[1]);
     const ticketData = params.get('ticketType');
@@ -26,6 +28,7 @@ const Details = ({ url }) => {
     }
   }, [url]);
   
+  // Vertaal het object naar leesbare text ipv 'object'.
   const generateTicketText = () => {
     const selectedTickets = [];
     if (ticketType.normaleTicket > 0) {
@@ -37,7 +40,7 @@ const Details = ({ url }) => {
     return `Je hebt gekozen voor: ${selectedTickets.join(" en ")}.`;
   };
 
-  // Validatie Telefoon
+  // Validatie Telefoonnummer
   const validatePhone = (value) => {
     const phoneRegex = /^\+?(\d{1,3})?\d{8,14}$/;
     setPhone(value);
@@ -54,10 +57,10 @@ const Details = ({ url }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Encoden van het ticketType zodat we het in Payment.jsx weer kunnen parsen
+    // Encoden van het ticketType zodat het in Payment.jsx weer kunnen parsen
     const ticketTypeString = encodeURIComponent(JSON.stringify(ticketType));
 
-    // 3) E-mail meesturen in de query
+    // E-mail meesturen in de url als prop
     route(`/payment?ticketType=${ticketTypeString}&name=${name}&phone=${phone}&email=${email}`, true);
   };
 
@@ -94,7 +97,6 @@ const Details = ({ url }) => {
                 {phoneError && <p style={{ color: "red" }}>Voer een geldig telefoonnummer in</p>}
               </label>
 
-              {/* 1) Nieuw inputveld voor E-MAIL */}
               <label htmlFor="email">
                 E-mailadres <span style={"color: red;"}>*</span>
                 <input
